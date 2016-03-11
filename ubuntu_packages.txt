@@ -1,0 +1,7 @@
+git
+vim
+python-pip
+vim-gnome
+tmux
+ack-grep
+nvm

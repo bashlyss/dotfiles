@@ -1,0 +1,63 @@
+" use Vim mode instead of pure Vi, it must be the first instruction
+set nocompatible
+
+source ~/.vim/plugins.vim
+
+" display settings
+set encoding=utf-8 " encoding used for displaying file
+set ruler " show the cursor position all the time
+set showmatch " highlight matching braces
+set showmode " show insert/replace/visual mode
+
+" write settings
+set confirm " confirm :q in case of unsaved changes
+set nobackup " do not keep the backup~ file
+
+set wildmode=list:longest,full
+set wildmenu
+
+" edit settings
+set tabstop=4 softtabstop=0 shiftwidth=4 smarttab
+set expandtab " fill tabs with spaces
+
+" search settings
+set hlsearch " highlight search results
+set ignorecase " do case insensitive search...
+set incsearch " do incremental search
+set smartcase " ...unless capital letters are used
+
+" file type specific settings
+filetype on " enable file type detection
+filetype plugin on " load the plugins for specific file types
+filetype indent on " automatically indent codei
+
+" syntax highlighting
+syntax on
+colorscheme desert
+
+let g:molokai_original = 1
+
+" press F4 to fix indentation in whole file; overwrites marker 'q' position
+noremap <F4> mqggVG=`qzz
+inoremap <F4> <Esc>mqggVG=`qzza
+
+" press F8 to turn the search results highlight off
+noremap <F8> :nohl<CR>
+inoremap <F8> <Esc>:nohl<CR>a
+
+" press F12 to toggle showing the non-printable charactes
+noremap <F12> :set list!<CR>
+inoremap <F12> <Esc>:set list!<CR>a
+
+" etcetera
+set mouse=a " Allow scrolling with mouse
+set number " Show the line numbers on the side
+
+" Return to last edit position when opening files (You want this!)
+ autocmd BufReadPost *
+       \ if line("'\"") > 0 && line("'\"") <= line("$") |
+       \   exe "normal! g`\"" |
+       \ endif
+
+ let g:syntastic_mode_map = { 'passive_filestypes': ['python']}
+ let g:syntastic_javascript_checkers = ['eslint']
