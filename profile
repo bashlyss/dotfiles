@@ -20,4 +20,6 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-PATH="$PATH:node_modules/.bin"
+export PATH="$PATH:node_modules/.bin"
+
+export EDITOR=$(which vim)
