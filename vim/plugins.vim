@@ -34,5 +34,6 @@ Plug 'ctrlpvim/ctrlp.vim', {'on': 'CtrlP'}
 
 Plug 'scrooloose/syntastic'
 Plug 'vim-scripts/fakeclip'
+Plug 'mxw/vim-jsx', {'for': 'jsx'}
 
 call plug#end()
