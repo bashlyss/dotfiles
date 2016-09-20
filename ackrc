@@ -1,4 +1,5 @@
 --type-set=minifiedjs=.min.js
+--type-set=jsx=.jsx
 
 --type-set=less=.less
 --nocss
