@@ -25,3 +25,5 @@ apt-get install < ubuntu_packages.txt
 if [[ $- == *i* ]]; then
     source ~/.bashrc
 fi
+
+echo "Open vim and run ':PlugInstall' to install plugins"

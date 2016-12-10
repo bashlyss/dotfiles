@@ -6,3 +6,7 @@
 --nominifiedjs
 
 --ignore-dir=teststatic
+--ignore-file=is:reverse.js
+--ignore-dir=dist
+--ignore-dir=gen
+--ignore-dir=zanbato/static
