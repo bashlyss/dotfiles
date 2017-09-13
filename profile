@@ -23,3 +23,5 @@ fi
 export PATH="$PATH:node_modules/.bin"
 
 export EDITOR=$(which vim)
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

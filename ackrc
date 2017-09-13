@@ -7,6 +7,8 @@
 
 --ignore-dir=teststatic
 --ignore-file=is:reverse.js
+--ignore-file=is:zxcvbn.js
 --ignore-dir=dist
+--ignore-dir=locale
 --ignore-dir=gen
 --ignore-dir=zanbato/static

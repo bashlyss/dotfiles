@@ -1,6 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/ubuntu/zanbato/zanbato/staff/templates/staff/ats'
-let g:netrw_dirhist_2='/home/ubuntu/zanbato/zanbato/staff/templates/staff/includes'
-let g:netrw_dirhist_3='/home/ubuntu/zanbato/zanbato/analytics/templates/analytics/components'
-let g:netrw_dirhist_4='/home/ubuntu/zanbato/zanbato/analytics/templates/analytics/includes'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/ubuntu/zanbato/zanbato/frontend/ats/__tests__/testUtils'
+let g:netrw_dirhist_2='/home/ubuntu/zanbato/zanbato/frontend/ats/__tests__/components/common/submitIndication'
