@@ -26,6 +26,10 @@ set ignorecase " do case insensitive search...
 set incsearch " do incremental search
 set smartcase " ...unless capital letters are used
 
+" spell check settings
+set spell
+set spelllang=en
+set spellfile=~/.vim/spell/en.utf-8.add
 " file type specific settings
 filetype on " enable file type detection
 filetype plugin on " load the plugins for specific file types
@@ -49,16 +53,39 @@ inoremap <F8> <Esc>:nohl<CR>a
 noremap <F12> :set list!<CR>
 inoremap <F12> <Esc>:set list!<CR>a
 
+noremap <C-p> :CtrlP<CR>
+
 " etcetera
 set mouse=a " Allow scrolling with mouse
 set number " Show the line numbers on the side
 
 " Return to last edit position when opening files (You want this!)
- autocmd BufReadPost *
-       \ if line("'\"") > 0 && line("'\"") <= line("$") |
-       \   exe "normal! g`\"" |
-       \ endif
+autocmd BufReadPost *
+      \ if line("'\"") > 0 && line("'\"") <= line("$") |
+      \   exe "normal! g`\"" |
+      \ endif
 
- let g:syntastic_mode_map = { 'passive_filestypes': ['python']}
- let g:syntastic_javascript_checkers = ['eslint']
- let g:syntastic_python_pylint_args = "--rcfile=~/zanbato/pylint.rc"
+let g:syntastic_mode_map = { 'passive_filestypes': ['python']}
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_python_pylint_args = "--rcfile=~/zanbato/pylintrc"
+
+let g:ale_lint_on_insert_leave = 1
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\v[\/](node_modules|lib|dist|third_party|bin|include|docs|coverage|log|zanbato\/static)$',
+  \ 'file': '\v(\.(min\.js|pyc)|zxcvbn)'
+  \ }
+
+let g:closetag_filenames = '*.html,*.jsx'
+let g:closetag_emptyTags_caseSensitive = 1
+
+let g:delimitMate_backspace = 2
+let g:delimitMate_expand_cr = 2
+
+if &diff
+    map <F5> :diffget LOCAL<CR>
+    map <F6> :diffget BASE<CR>
+    map <F7> :diffget REMOTE<CR>
+endif

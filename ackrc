@@ -1,5 +1,7 @@
 --type-set=minifiedjs=.min.js
 --type-set=jsx=.jsx
+--type-set=specjs=.spec.js
+--type-set=snap=.snap
 
 --type-set=less=.less
 --nocss
