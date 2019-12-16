@@ -53,10 +53,11 @@ Plug 'tomasr/molokai'
 
 Plug 'vim-scripts/fakeclip'
 
-Plug 'vim-scripts/JavaScript-Indent', {'for': 'javascript'}
+" Plug 'vim-scripts/JavaScript-Indent', {'for': 'javascript'}
 
 " vim-polyglot replaces the plugins below it - syntax highlighting
 Plug 'sheerun/vim-polyglot'
+Plug 'gavocanov/vim-js-indent'
 " Plug 'elzr/vim-json', {'for': 'json'}
 " Plug 'pangloss/vim-javascript', {'for': 'javascript'}
 " Plug 'mxw/vim-jsx', {'for': 'jsx'}

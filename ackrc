@@ -7,6 +7,7 @@
 --nocss
 --nominifiedjs
 
+--ignore-dir=lib/python3.6
 --ignore-dir=teststatic
 --ignore-file=is:reverse.js
 --ignore-file=is:zxcvbn.js
@@ -14,3 +15,4 @@
 --ignore-dir=locale
 --ignore-dir=gen
 --ignore-dir=zanbato/static
+--ignore-dir=log
