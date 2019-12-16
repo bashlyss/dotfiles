@@ -92,9 +92,11 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # Alias definitions.
 function find_replace { 
-    find ${3:-.} -type f -name "*${4}" -exec sed -i -e "s/${1}/${2}/g" {} \; 
+    find ${3:-.} -type f -name "*${4}" -exec sed -i '' -e "s/${1}/${2}/g" {} \; 
 }
 alias eslintcap='eslint --format compact'
+
+alias stash='git add -A;git commit -anm "TODO POP"'
 
 
 export NVM_DIR="/home/ubuntu/.nvm"
@@ -103,4 +105,7 @@ export NVM_DIR="/home/ubuntu/.nvm"
 if [ -d ~/zanbato ]; then
     source ~/zanbato/bin/activate
     export PATH=./node_modules/.bin/:$PATH
+fi
+if [ -d ~/flutter ]; then
+    export PATH=$PATH:~/flutter/bin
 fi

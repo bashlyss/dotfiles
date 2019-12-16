@@ -1,9 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/jamesloewen/zanbato/zanbato/frontend/accounts/components/pages/settings'
-let g:netrw_dirhist_2='/Users/jamesloewen/zanbato/zanbato/frontend/members/components/userprofile'
-let g:netrw_dirhist_3='/Users/jamesloewen/zanbato/zanbato'
-let g:netrw_dirhist_4='/Users/jamesloewen/zanbato/zanbato/atsaccounts'
-let g:netrw_dirhist_5='/Users/jamesloewen/zanbato/zanbato/atsanalytics/migrations/__pycache__'
-let g:netrw_dirhist_6='/Users/jamesloewen/zanbato/zanbato/atsaccounts/migrations/__pycache__'
-let g:netrw_dirhist_7='/Users/jamesloewen/zanbato/zanbato/frontend'
+let g:netrw_dirhist_cnt =0
