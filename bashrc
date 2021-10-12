@@ -71,7 +71,7 @@ esac
 
 if [ -f ~/.ssh/id_rsa_do ]; then
     eval `ssh-agent -s`
-    ssh-add ~/.ssh/id_rsa_do
+    # ssh-add ~/.ssh/id_rsa_do
 fi
 
 # enable color support of ls and also add handy aliases
@@ -102,12 +102,13 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 function find_replace { 
-    find ${3:-.} -type f -name "*${4}" -exec sed -i '' -e "s/${1}/${2}/g" {} \; 
+    find ${3:-.} -type f -name "*${4}" -exec sed -i -e "s/${1}/${2}/g" {} \; 
 }
 alias eslintcap='eslint --format compact'
 
 alias stash='git add -A;git commit -anm "TODO POP"'
 
+alias launchwork='cmd.exe /c "wt.exe" \; sp -V \; sp -H \; nt \; sp -V \; nt \; sp -V'
 
 export NVM_DIR="/home/ubuntu/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -130,3 +131,6 @@ fi
 if [ -d ~/flutter ]; then
     export PATH=$PATH:~/flutter/bin
 fi
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

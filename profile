@@ -29,6 +29,6 @@ export PATH="$PATH:node_modules/.bin"
 
 export EDITOR=$(which vim)
 
-export NVM_DIR="/Users/jamesloewen/.nvm"
+export NVM_DIR="/home/james/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
